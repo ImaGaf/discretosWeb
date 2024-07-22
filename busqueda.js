@@ -1,24 +1,32 @@
 document.getElementById('busqueda').addEventListener('submit', function (event) {
     event.preventDefault();
     let textInput = document.getElementById('textInputBus').value;
-    let searchInput = document.getElementById('searchInput').value;
+    let searchInput = Number(document.getElementById('searchInput').value);
     document.getElementById('textInputBus').value = '';
     document.getElementById('searchInput').value = '';
 
-    let arr = textInput.split(",");
+    let arr = textInput.split(",").map(Number);
 
-    let indice = busquedaLineal(arr, searchInput).index;
-    if(indice == -1){
-        
-    }else{
-        document.getElementById('listaBusqueda').textContent = `Lista Ingresada: ${arr}`;
-        document.getElementById('indice').textContent = `El número ${searchInput} fue encontrado en el índice ${indice}`;
-        cambiarPaginaBus(arr);
-        llenarTablaBus(arr,searchInput);
+    if (!isArrayNumeric(arr)) {
+        alert('Por favor, introduzca una cadena de solo numeros.');
+    } else {
+        let indice = busquedaLineal(arr, searchInput).index;
+        if (indice == -1) {
+
+        } else {
+            document.getElementById('listaBusqueda').textContent = `Lista Ingresada: ${arr}`;
+            document.getElementById('indice').textContent = `El número ${searchInput} fue encontrado en el índice ${indice}`;
+            cambiarPaginaBus(arr);
+            llenarTablaBus(arr, searchInput);
+        }
     }
 })
 
-document.getElementById('regresarButtonBus').onclick = function(){
+function isArrayNumeric(array) {
+    return array.every(item => typeof item === 'number' && !isNaN(item));
+}
+
+document.getElementById('regresarButtonBus').onclick = function () {
     document.getElementById('ingresoMainBusqueda').classList.toggle('hiddenBus');
     document.getElementById('resultadoBusqueda').classList.toggle('showBus');
 }
@@ -43,7 +51,7 @@ function llenarTablaBus(arr, target) {
 function busquedaLineal(arr, target) {
     let iteraciones = 0;
     let startTime = performance.now();
-    
+
     for (let i = 0; i < arr.length; i++) {
         iteraciones++;
         if (arr[i] === target) {

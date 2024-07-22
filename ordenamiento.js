@@ -3,11 +3,18 @@ document.getElementById('ordenamiento').addEventListener('submit', function (eve
     event.preventDefault();
     let textInput = document.getElementById('textInput').value;
     document.getElementById('textInput').value = '';
-
     let arr = textInput.split(",").map(Number);
-    cambiarPagina(arr);
-    llenarTabla(arr);
+    if(!isArrayNumeric(arr)){
+        alert('Por favor, introduzca una cadena de solo numeros.');
+    }else{
+        cambiarPagina(arr);
+        llenarTabla(arr);
+    }
 })
+
+function isArrayNumeric(array) {
+    return array.every(item => typeof item === 'number' && !isNaN(item));
+}
 
 document.getElementById('regresarButton').onclick = function(){
     document.getElementById('ingresoMain').classList.toggle('hiddenIngre');

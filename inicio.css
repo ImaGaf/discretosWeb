@@ -60,3 +60,11 @@ ul {
     margin: 10px 0;
 }
 
+ul > p{
+    text-align: justify;
+}
+
+ul > div{
+    display: flex;
+    justify-content: center;
+}

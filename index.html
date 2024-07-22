@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Algoritmos Discretos</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="ordenamiento.css">
     <link rel="stylesheet" href="busqueda.css">
@@ -68,12 +68,30 @@
             <p>El ordenamiento es el proceso de organizar datos en un orden particular. Existen varios algoritmos de
                 ordenamiento, entre los más comunes se encuentran:</p>
             <ul>
-                <li>Bubble Sort</li>
-                <li>Insertion Sort</li>
-                <li>Selection Sort</li>
-                <li>Quick Sort</li>
-                <li>Merge Sort</li>
+                <br>
+                <li>Bubble Sort</li> <br>
+                <p>El Ordenamiento de burbuja (BubbleSort) es un algoritmo de ordenamiento simple. El mismo funciona revisando cada elemento de la lista a ordenar con el que le sigue, cambiándolos de posición si están en un orden incorrecto (n>n+1). Es necesario repetir este proceso varias veces hasta que no se necesiten más cambios, lo que significa que la lista quedó ordenada. Un ejemplo de ordenamiento con bubblesort sería:</p> <br>
+                <div><img src="./img/bubble-sort.gif" alt="bubble-sort"></div>
+                <li>Insertion Sort</li><br>
+                <p>El método de ordenamiento de inserción actua recorriendo la lista a ordenar, tomando el elemento actual e insertándolo donde debería comparandoló entre los que ya ha recorrido. Esta es una muestra mas clara del Método de ordenamiento por Inserción:</p><br>
+                <div><img src="./img/insertion-sort-example.gif" alt="bubble-sort"></div>
+                <li>Selection Sort</li><br>
+                <p>El Método de ordenamiento por selección consiste en buscar el menor entre todos los elementos no ordenados y colocarlo al principio, luego se debe repetir lo mismo con los restantes (no se tienen en cuenta los ya ordenados). Aquí una muestra más visual del Método:</p><br>
+                <div></div><img src="./img/selection-sort-animation.gif" alt="bubble-sort"><br></div>
+                <li>Quick Sort</li><br>
+                <p>Al igual que el ordenamiento por mezcla, el ordenamiento rápido es un algoritmo divide y ganarás, el mismo funciona seleccionando un elemento como pivot y dividiendo la matriz dada alrededor del pivot elegido. Hay muchas versiones diferentes de ordenamiento rápido que eligen pivotar de diferentes maneras. </p><br> 
+                <p>1. Elegir siempre el primer elemento como pivot.</p>
+                <p>2. Elegir siempre el último elemento como pivot.</p>
+                <p>3. Elegir un elemento aleatorio como pivot.</p>
+                <p>4. Elegir la mitad como pivot.</p><br>
+                <p>El proceso llevado a cabo en el ordenamiento rápido es la partición, el objetivo de las mismas es, dado una matriz A y un elemento x de la matriz como pivot, poner x en su posición correcta en la matriz ordenada y poner todos los elementos menores que x antes de x, y poner todos los elementos mayores que x después de x. Aquí hay una demostración grafica del proceso llevado a cabo:</p><br>
+                <div></div><img src="./img/Sorting_quicksort.gif" alt="bubble-sort"><br></div>
+                <li>Merge Sort</li><br>
+                <p>El Método de ordenamiento por mezcla tiene un funcionamiento muy particular, primero debemos saber que si la longitud de la lista es 0 ó 1 ya está ordenada, En otro caso: el algoritmo deberá dividir la lista desordenada en dos sublistas de aproximadamente la mitad del tamaño, luego ordenará cada sublista recursivamente aplicando el ordenamiento por mezcla y por ultimo mezcla las dos sublistas en una sola lista ordenada. Esta es una demostración gráfica del mismo:</p><br>
+                <div></div><img src="./img/Merge-sort.gif" alt="bubble-sort"><br></div>
                 <li>Heap Sort</li>
+                <p>El Método de Ordenamiento del montón es similar a la clasificación por selección donde primero encontramos el elemento máximo y lo colocamos al final. Repetimos el mismo proceso para el resto de elementos. Pero en el Método del montón debemos realizar previamente montones que son los que irán acomodandose con el algoritmo según cual es más grande de un lado o del otro del montón y al mismo tiempo, se irán eliminando y acomodando los elementos mayores en la lista. Aquí hay un ejemplo gráfico del proceso:</p><br>
+                <div></div><img src="./img/heapsort.gif" alt="bubble-sort"><br></div>
             </ul>
         </article>
 
@@ -95,10 +113,10 @@
         <p class="cabecera"><img src="img/img_formCombinaciones.png" width="608" height="300" alt="" /></p>
         <form id="calcForm">
             <label for="n">Representa el número total de objetos que están presentes en un conjunto -> n</label>
-            <input type="number" id="n" name="n" required step="1">
+            <input type="number" id="n" name="nP" required step="1">
             <br>
             <label for="r">Número de objetos seleccionados -> r</label>
-            <input type="number" id="r" name="r" required step="1">
+            <input type="number" id="r" name="rP" required step="1">
 
             <br>
 
@@ -123,8 +141,47 @@
             <br>
             <button type="submit">Calcular</button>
         </form>
-        <p class="resultsPer">Resultados:</p>
-        <p id="resultadoPermu"></p>
+        <h1 class="cabecera">Permutaciones sin repetición (lineal)</h1>
+        <p class="cabecera"><img src="img/permutaciones_sinrepet.png" alt="" /></p>
+        <form id="calcForm2">
+            <label for="n2">Representa el número total de objetos que están presentes en un conjunto -> n</label>
+            <input type="number" id="n2" name="n2" required step="1">
+            <br><br>
+            <button type="submit">Calcular</button>
+        </form>
+
+        <h1 class="cabecera">Permutaciones Circulares</h1>
+        <p class="cabecera"><img src="img/permutaciones_circulares.jpg" width="217" height="53" alt="" /></p>
+        <p class="cabecera">&nbsp;</p>
+        <form id="calcForm3">
+            <label for="n3">Representa el número total de objetos que están presentes en un conjunto -> n</label>
+            <input type="number" id="n3" name="n3" required step="1">
+            <br><br>
+            <button type="submit">Calcular</button>
+        </form>
+
+        <h1 class="cabecera">Permutaciones con repetición</h1>
+
+        <p class="cabecera"><img src="img/permutaciones_repett.jpg" width="421" height="151" alt="" /></p>
+        <form id="calcForm4">
+            <label for="n4">Representa el número total de objetos que están presentes en un conjunto -> n</label>
+            <input type="number" id="n4" name="n4" required step="1">
+            <br>
+            <label for="a4">Número de repeticiones del primer objeto -> a</label>
+            <input type="number" id="a4" name="a4" required step="1">
+            <br>
+            <label for="b4">Número de repeticiones del segundo objeto -> b</label>
+            <input type="number" id="b4" name="b4" required step="1">
+            <br><br>
+            <button type="submit">Calcular</button>
+        </form>
+
+        <p class="resultsPermu">Resultados:</p>
+        <p id="resultadoPer"></p>
+        <p id="resultado2"></p>
+        <p id="resultado3"></p>
+        <p id="resultado4"></p>
+
     </section>
     <section id="induccion">
         <h1 class="titulo">Inducción</h1>
@@ -167,7 +224,7 @@
         <form id="ingresoMain">
             <div class="ingreso">
                 <p>Ingrese la lista a ordenar</p>
-                <input type="text" id="textInput" name="textInput" placeholder="1,3,7,2,8,9">
+                <input type="text" id="textInput" required step="1" name="textInput" placeholder="1,3,7,2,8,9">
             </div>
             <button type="submit">ORDENAR</button>
         </form>
@@ -236,6 +293,7 @@
     </section>
     <section id="busqueda">
         <h1 class="titulo">Metodos de Busqueda</h1>
+        <p>Ingrese una lista ordenada de meno a mayor, caso contrario el metodo Binario y de interpolacion no funcionarán</p>
         <form id="ingresoMainBusqueda">
             <div class="ingresoBusqueda">
                 <div class="inputLista">
