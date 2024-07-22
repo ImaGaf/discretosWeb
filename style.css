@@ -1,38 +1,51 @@
 .cabecera {
   margin-top: calc(3rem + 60px);
+  margin-bottom: -4rem;
   text-align: center;
 }
 
-#combinacion{
+#combinacion {
   display: none;
 }
 
-#combinacion.showCombi{
-  display:contents;
+#combinacion.showCombi {
+  display: contents;
 }
 
 #permutacion {
   display: none;
 }
 
-#permutacion.showPermu{
+#permutacion.showPermu {
   display: contents;
 }
 
 body {
-  background-color: #f9f6f2;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: Arial, sans-serif;
 }
 
-form {
+#combinacion > form {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
   background-color: #FCF7DE;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 8rem;
+}
+
+#permutacion > form {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #FCF7DE;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 8rem;
 }
 
 fieldset {
@@ -96,13 +109,18 @@ span {
   color: red;
 }
 
-.results, .resultsPermu{
+.results,
+.resultsPermu {
   font-size: 24px;
   font-weight: 700;
   padding-left: 2rem;
   padding-bottom: 2rem;
 }
 
-#resultadoCombi, #resultadoPer, #resultado2, #resultado3, #resultado4{
+#resultadoCombi,
+#resultadoPer,
+#resultado2,
+#resultado3,
+#resultado4 {
   padding: 1rem 3rem;
 }
