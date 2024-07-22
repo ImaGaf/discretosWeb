@@ -1,0 +1,104 @@
+.cabecera {
+  margin-top: calc(3rem + 60px);
+  text-align: center;
+}
+
+#combinacion{
+  display: none;
+}
+
+#combinacion.showCombi{
+  display:contents;
+}
+
+#permutacion {
+  display: none;
+}
+
+#permutacion.showPermu{
+  display: contents;
+}
+
+body {
+  background-color: #f9f6f2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #FCF7DE;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="datetime-local"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: 45%;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 2.5%;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+input[type="reset"] {
+  background-color: #f44336;
+  color: white;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  opacity: 0.9;
+}
+
+span {
+  color: red;
+}
+
+.results, .resultsPer{
+  font-size: 24px;
+  font-weight: 700;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}

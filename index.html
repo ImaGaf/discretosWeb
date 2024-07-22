@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="ordenamiento.css">
+    <link rel="stylesheet" href="busqueda.css">
+    <link rel="stylesheet" href="recursion.css">
+    <link rel="stylesheet" href="induccion.css">
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="lista" id="lista">
+            <li id="inicioNav">Inicio</li>
+            <li id="combinacionNav">Combinación</li>
+            <li id="permutacionNav">Permutación</li>
+            <li id="induccionNav">Inducción</li>
+            <li id="recursionNav">Recursión</li>
+            <li id="ordenamientoNav">Ordenamiento</li>
+            <li id="busquedaNav">Busqueda</li>
+        </div>
+    </nav>
+    <section id="inicio">
+        <h1 class="title">Algoritmos</h1>
+        <article>
+            <h2>Combinación</h2>
+            <p>La combinación es una forma de seleccionar elementos de un conjunto donde el orden no importa. El número
+                de combinaciones de un conjunto de n elementos tomados r a la vez está dado por la fórmula:</p>
+            <p class="formula">C(n, r) = n! / [r! * (n - r)!]</p>
+        </article>
+
+        <article>
+            <h2>Permutación</h2>
+            <p>La permutación es una forma de ordenar todos los miembros de un conjunto en un orden o secuencia. El
+                número de permutaciones de un conjunto de n elementos tomados r a la vez está dado por la fórmula:</p>
+            <p class="formula">P(n, r) = n! / (n - r)!</p>
+        </article>
+
+        <article>
+            <h2>Inducción</h2>
+            <p>La inducción matemática es una técnica de demostración utilizada en matemáticas. Se utiliza para
+                demostrar que una propiedad es verdadera para todos los números naturales. La prueba por inducción
+                consta de dos pasos:</p>
+            <ul>
+                <li>Base: Demostrar que la propiedad es verdadera para el primer número natural.</li>
+                <li>Inducción: Suponer que la propiedad es verdadera para un número natural k, y luego demostrar que
+                    también es verdadera para k+1.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Recursión</h2>
+            <p>La recursión es una técnica de programación donde una función se llama a sí misma. Se utiliza para
+                resolver problemas que pueden dividirse en subproblemas más pequeños del mismo tipo. Un ejemplo clásico
+                de recursión es el cálculo del factorial de un número:</p>
+            <p class="code">factorial(n) = n * factorial(n - 1)</p>
+        </article>
+        <article>
+            <h2>Ordenamiento</h2>
+            <p>El ordenamiento es el proceso de organizar datos en un orden particular. Existen varios algoritmos de
+                ordenamiento, entre los más comunes se encuentran:</p>
+            <ul>
+                <li>Bubble Sort</li>
+                <li>Insertion Sort</li>
+                <li>Selection Sort</li>
+                <li>Quick Sort</li>
+                <li>Merge Sort</li>
+                <li>Heap Sort</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Búsqueda</h2>
+            <p>La búsqueda es el proceso de encontrar un elemento en un conjunto de datos. Existen varios algoritmos de
+                búsqueda, entre los más comunes se encuentran:</p>
+            <ul>
+                <li>Búsqueda Lineal</li>
+                <li>Búsqueda Binaria</li>
+                <li>Búsqueda por Interpolación</li>
+                <li>Búsqueda Hash</li>
+            </ul>
+        </article>
+
+    </section>
+    <section id="combinacion">
+        <h1 class="cabecera">Calculadora de Combinaciones </h1>
+        <p class="cabecera"><img src="img/img_formCombinaciones.png" width="608" height="300" alt="" /></p>
+        <form id="calcForm">
+            <label for="n">Representa el número total de objetos que están presentes en un conjunto -> n</label>
+            <input type="number" id="n" name="n" required step="1">
+            <br>
+            <label for="r">Número de objetos seleccionados -> r</label>
+            <input type="number" id="r" name="r" required step="1">
+
+            <br>
+
+            <br>
+            <button type="submit">Calcular</button>
+        </form>
+        <p class="results">Resultados:</p>
+        <p id="resultadoCombi"></p>
+    </section>
+    <section id="permutacion">
+        <h1 class="cabecera">Calculadora de Permutaciones </h1>
+        <p class="cabecera"><img src="img/img_permutaciones.png" width="315" height="160" alt="" /></p>
+        <form id="calcFormPermu">
+            <label for="n">Representa el número total de objetos que están presentes en un conjunto -> n</label>
+            <input type="number" id="nP" name="nP" required step="1">
+            <br>
+            <label for="r">Número de objetos seleccionados -> r</label>
+            <input type="number" id="rP" name="rP" required step="1">
+
+            <br>
+
+            <br>
+            <button type="submit">Calcular</button>
+        </form>
+        <p class="resultsPer">Resultados:</p>
+        <p id="resultadoPermu"></p>
+    </section>
+    <section id="induccion">
+        <h1 class="titulo">Inducción</h1>
+        <div class="inducContain">
+            <form id="formInduccion">
+                <div class="ingresoInduccion">
+                    <p>Ingrese un numero: </p>
+                    <input type="nuber" id="inputInduccion" name="inputInduccion" placeholder="7">
+                </div>
+                <div class="buttonInduccion">
+                    <button id="induccionButton" type="submit">Resolver</button>
+                </div>
+            </form>
+            <div>
+                <p id="resultadoInduccion"></p>
+            </div>
+        </div>
+    </section>
+    <section id="recursion">
+        <h1 class="titulo">Recursividad</h1>
+        <div class="recurContain">
+            <form id="formRecursividad">
+                <div class="ingresoRecursvidad">
+                    <p>Ingrese un numero: </p>
+                    <input type="number" id="inputRecursividad" name="inputRecursividad" required step="1"
+                        placeholder="3">
+                </div>
+                <div class="buttonRecursividad">
+                    <button id="fibonacciButton" type="submit">Fibonacci</button>
+                    <button id="factorialButton" type="submit">Factorial</button>
+                </div>
+            </form>
+            <div>
+                <p id="resultadoRecursividad"></p>
+            </div>
+        </div>
+    </section>
+    <section id="ordenamiento">
+        <h1 class="titulo">Metodos de Ordenamiento</h1>
+        <form id="ingresoMain">
+            <div class="ingreso">
+                <p>Ingrese la lista a ordenar</p>
+                <input type="text" id="textInput" name="textInput" placeholder="1,3,7,2,8,9">
+            </div>
+            <button type="submit">ORDENAR</button>
+        </form>
+        <div id="resultado">
+            <p id="listaIngresada">Lista Ingresada: </p>
+            <p id="listaOrdenada">Lista Ordenada: </p>
+            <div>
+                <table>
+                    <caption class="tituloTabla">Tabla de Comparación</caption>
+                    <thead>
+                        <th class="empty"> </th>
+                        <th>BubbleSort</th>
+                        <th>InsertionSort</th>
+                        <th>SelectionSort</th>
+                        <th>QuickSort</th>
+                        <th>MergeSort</th>
+                        <th>ShellSort</th>
+                        <th>HeapSort</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="type1">Elementos</td>
+                            <td id="Elemento1"></td>
+                            <td id="Elemento2"></td>
+                            <td id="Elemento3"></td>
+                            <td id="Elemento4"></td>
+                            <td id="Elemento5"></td>
+                            <td id="Elemento6"></td>
+                            <td id="Elemento7"></td>
+                        </tr>
+                        <tr>
+                            <td class="type2">Comparaciones</td>
+                            <td id="comparacion1"></td>
+                            <td id="comparacion2"></td>
+                            <td id="comparacion3"></td>
+                            <td id="comparacion4"></td>
+                            <td id="comparacion5"></td>
+                            <td id="comparacion6"></td>
+                            <td id="comparacion7"></td>
+                        </tr>
+                        <tr>
+                            <td class="type3">Intercambios </td>
+                            <td id="cambio1"></td>
+                            <td id="cambio2"></td>
+                            <td id="cambio3"></td>
+                            <td id="cambio4"></td>
+                            <td id="cambio5"></td>
+                            <td id="cambio6"></td>
+                            <td id="cambio7"></td>
+                        </tr>
+                        <tr>
+                            <td class="type4">Tiempo</td>
+                            <td id="tiempo1"></td>
+                            <td id="tiempo2"></td>
+                            <td id="tiempo3"></td>
+                            <td id="tiempo4"></td>
+                            <td id="tiempo5"></td>
+                            <td id="tiempo6"></td>
+                            <td id="tiempo7"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="regresar"><button class="regresarButton" id="regresarButton">Regresar</button></div>
+        </div>
+    </section>
+    <section id="busqueda">
+        <h1 class="titulo">Metodos de Busqueda</h1>
+        <form id="ingresoMainBusqueda">
+            <div class="ingresoBusqueda">
+                <div class="inputLista">
+                    <p>Ingrese lista de busqueda</p>
+                    <input type="text" id="textInputBus" required step="1" name="textInput" placeholder="1,3,7,2,8,9">
+                </div>
+                <div>
+                    <p class="inputBusqueda">Ingrese el número a buscar</p>
+                    <input type="number" id="searchInput" required step="1" name="searchInput" placeholder="4">
+                </div>
+            </div>
+            <button type="submit">ORDENAR</button>
+        </form>
+        <div id="resultadoBusqueda">
+            <p id="listaBusqueda">Lista ingresada: </p>
+            <p id="indice">Indice: </p>
+            <div>
+                <table>
+                    <caption class="tituloTabla">Tabla de Comparación</caption>
+                    <thead>
+                        <th class="empty"> </th>
+                        <th>Lineal</th>
+                        <th>Binaria</th>
+                        <th>Interpolación</th>
+                        <th>Hashing</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="type1">Elementos</td>
+                            <td id="Elemento1B"></td>
+                            <td id="Elemento2B"></td>
+                            <td id="Elemento3B"></td>
+                            <td id="Elemento4B"></td>
+                        </tr>
+                        <tr>
+                            <td class="type2">Comparaciones</td>
+                            <td id="comparacion1B"></td>
+                            <td id="comparacion2B"></td>
+                            <td id="comparacion3B"></td>
+                            <td id="comparacion4B"></td>
+                        </tr>
+                        <tr>
+                            <td class="type4">Tiempo</td>
+                            <td id="tiempo1B"></td>
+                            <td id="tiempo2B"></td>
+                            <td id="tiempo3B"></td>
+                            <td id="tiempo4B"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="regresarBus"><button class="regresarButtonBus" id="regresarButtonBus">Regresar</button></div>
+        </div>
+    </section>
+    <script src="combinaciones.js"></script>
+    <script src="permutaciones.js"></script>
+    <script src="busqueda.js"></script>
+    <script src="ordenamiento.js"></script>
+    <script src="induccion.js"></script>
+    <script src="Recursion.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

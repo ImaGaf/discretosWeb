@@ -1,0 +1,145 @@
+#ordenamiento{
+    display: none;
+}
+
+#ordenamiento.showOrde{
+    margin-top: calc(3rem + 20px);  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    height: calc(100vh - 3rem - 63px);
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+
+#ingresoMain.hiddenIngre{
+    display: none;
+}
+
+#ingresoMain{
+    background-color: white;
+    font-size: 22px;
+    border: solid 1px gray;
+    border-radius: 10px;
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    box-shadow: 0 0  20px 4px rgb(82, 82, 82);
+}
+
+#ingresoMain > button{
+    margin-top: 1rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: solid 1px;
+    background-color: rgb(0, 0, 0);
+    color:rgb(230, 230, 230);
+    margin-top: 2rem;
+}
+
+#ingresoMain > button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.ingreso{
+    display: flex;
+    margin-top: 3rem;
+    gap: 1rem;
+}
+
+#textInput{
+    font-size: 16px;
+    border: solid 1px gray;
+    border-radius: 2px;
+    padding: 6px 10px;
+    width: 200px;
+}
+
+
+
+#resultado{
+    display: none;
+}
+#resultado.showOrde{
+    display: flex;
+    gap: 1rem;
+    width: 90vw;
+    height: 65vh;
+    flex-direction: column;
+    margin-top: -2rem;
+}
+#resultado > p{
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);;
+    display: flex; 
+}
+
+table {
+    width: 100%;
+}
+th, td {
+    
+    padding: 8px;
+    text-align: center;
+}
+
+.type1,.type2,.type3,.type4{
+    text-align: left;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+    color: rgb(230, 230, 230);
+}
+
+th {
+    background-color: #000000;
+    color: rgb(230, 230, 230);
+    border-radius: 4px;
+}
+
+.empty{
+    background-color: transparent;
+}
+
+.tituloTabla{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.regresarButton{
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: solid 1px;
+    background-color: rgb(0, 0, 0);
+    color:rgb(230, 230, 230);
+    display: flex;
+    justify-content: center;
+}
+
+.regresarButton:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.regresar{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 2rem;
+}
