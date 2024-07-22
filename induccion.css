@@ -66,4 +66,6 @@
     display: flex;
     width: 80%;
     align-items: center;
+    gap: 4rem;
+    justify-content: center; 
 }
